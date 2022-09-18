@@ -1,0 +1,33 @@
+{
+  "name": "cultivation",
+  "description": "cultivation game, auto upgrade!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icons": {
+      "16": "/icons/avtor.jpeg",
+      "32": "/icons/avtor.jpeg",
+      "48": "/icons/avtor.jpeg",
+      "128": "/icons/avtor.jpeg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://live.bilibili.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "host_permissions": ["https://*/"],
+  "permissions": ["storage", "scripting", "tabs", "notifications", "activeTab"],
+  "icons": {
+    "16": "/icons/avtor.jpeg",
+    "32": "/icons/avtor.jpeg",
+    "48": "/icons/avtor.jpeg",
+    "128": "/icons/avtor.jpeg"
+  }
+}
